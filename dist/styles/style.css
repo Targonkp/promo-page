@@ -503,8 +503,8 @@ p {
   bottom: -8px;
   left: 0;
   background: #238844;
-  -webkit-animation: borderLine 1s;
-  animation: borderLine 1s;
+  -webkit-animation: borderLine 0.8s;
+  animation: borderLine 0.8s;
 }
 @media only screen and (max-width: 1300px) {
   .nav__link {
@@ -515,6 +515,9 @@ p {
   .nav__link {
     display: inline-block;
     margin: 0 18px 3px 0;
+  }
+  .nav__link:hover::after {
+    bottom: -3px;
   }
 }
 @media only screen and (max-width: 768px) {
