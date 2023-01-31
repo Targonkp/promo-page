@@ -1,0 +1,72 @@
+$mainFont: 'Graphik LC Web', sans-serig;
+$mainColor: #1D1D1F;
+$mainBackgroundColor: #ffffff;
+@import "adaptive";
+
+body{
+  background: $mainBackgroundColor;
+  font-family: $mainFont;
+  color: $mainColor;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.wrap{
+  max-width: 1920px;
+  min-width: 320px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.wrap-additional{
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1{
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 68px;
+  letter-spacing: -0.01em;
+  width: 100%;
+  margin: 24px 0 20px 0;
+  word-wrap: break-word;
+
+    @include medium{
+      font-size: 50px;
+      line-height: 55px;
+    }
+
+    @include small{
+      font-size: 27px;
+      line-height: 32px;
+      margin: 12px 0;
+    }
+}
+
+p{
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  width: 100%;
+  margin: 6px 0;
+
+    @include small{
+      font-size: 16px;
+      line-height: 24px;
+      margin: 4px 0;
+    }
+}
+
+article p{
+  @include small{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 34px;
+  }
+}

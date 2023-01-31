@@ -1,0 +1,1 @@
+"use strict";var burgerMenu=document.querySelector(".menu-toggle");burgerMenu.addEventListener("click",(function(){burgerMenu.classList.toggle("open"),"hidden"===document.body.style.overflow?document.body.style.overflow="visible":document.body.style.overflow="hidden"}));

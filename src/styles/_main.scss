@@ -1,0 +1,315 @@
+@import "adaptive";
+
+.main-block{
+  background: #CEF8FF;
+  padding: 121px 0 195px 0;
+
+      @include small{
+        padding: 30px 0 253px 0;
+      }
+
+    &__wrap{
+      display: flex;
+      flex-direction: row;
+
+      @include small{
+        flex-direction: column;
+      }
+    }
+
+    &__text{
+      max-width: 700px;
+      width: 100%;
+      flex: 1 1 700px;
+
+      @include small{
+        flex: 0;
+        margin: 0 0 24px 0;
+      }
+
+          & p{
+            max-width: 585px;
+            width: 100%;
+          }
+    }
+
+    &__image{
+      flex: 2 1 611px;
+
+      @include small{
+        flex: 0;
+        margin: 0;
+      }
+
+          .main-image{
+            max-width: 611px;
+            width: 100%;
+            height: auto;
+          }
+    }
+}
+
+.menu-list{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 1;
+
+    &__element{
+      background: rgba(0, 0, 0, 0);
+      border: 2px solid #000000;
+      border-radius: 4px;
+      margin: 0 13px 0 0;
+      position: relative;
+
+      @include small{
+        margin: 0 7px 0 0;
+        border: 1px solid #000000;
+        border-radius: 3px;
+      }
+
+      &::after{
+        content: "";
+        position: absolute;
+        background: #7AE1F2;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        bottom: -10px;
+        right: -10px;
+        z-index: -1;
+        transition: 0.4s;
+
+          @include small{
+            border-radius: 3px;
+            bottom: -5px;
+            right: -5px;
+          }
+      }
+
+      &:first-child::after{
+        background: #FFE079;
+      }
+
+      &:hover::after{
+        bottom: 0;
+        right: 0;
+        transition: 0.5s;
+      }
+    }
+
+    &__link{
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 24px;
+      color: #1D1D1F;
+      letter-spacing: -0.01em;
+      padding: 8px 14px;
+      display: inline-block;
+
+        @include small{
+          font-size: 14px;
+          line-height: 15px;
+          padding: 5px 8px;
+        }
+    }
+}
+
+.article-block{
+    background: #FFFFFF;
+    padding: 206px 0 100px 0;
+    position: relative;
+
+    @include medium{
+      padding: 264px 0 100px 0;
+    }
+}
+
+.statistics{
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 72px 0 55px;
+  box-sizing: border-box;
+  height: 184px;
+  margin: 0;
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F5F5F5;
+  box-shadow: 0 30px 44px rgba(45, 45, 45, 0.1);
+  border-radius: 18px;
+  position: absolute;
+  top: -92px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+    @include large{
+      max-width: 1000px;
+    }
+
+    @include medium{
+      max-width: 760px;
+      padding: 0 35px 0 25px;
+    }
+
+    @include small{
+      max-width: 500px;
+      flex-direction: column;
+      height: auto;
+      padding: 33px 32px 30px 32px;
+      top: -50%;
+    }
+
+    @include x-small{
+      max-width: 300px;
+    }
+
+  .button-block{
+
+    @include medium{
+      margin-right: 20px;
+    }
+
+    @include small{
+      margin-right: 0;
+    }
+  }
+
+    &__button{
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #C4C4C4;
+      padding: 4px;
+      box-sizing: border-box;
+      width: 231px;
+      height: 71px;
+      letter-spacing: -0.01em;
+      font-size: 22px;
+      line-height: 34px;
+      font-weight: 600;
+      color: #000000;
+      transition: 0.3s;
+
+        @include large{
+          width: 200px;
+          height: 64px;
+        }
+
+        @include small{
+          width: 237px;
+          height: 71px;
+        }
+
+        &:hover{
+          opacity: 0.5;
+          transition: 0.4s;
+          border-radius: 5px;
+        }
+    }
+}
+
+.statistics-list{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+
+  @include small{
+    margin: 24px 0 0 0;
+    flex-direction: column;
+  }
+
+      &__element{
+        margin: 10px 44px;
+
+        @include medium{
+          margin: 10px 28px;
+        }
+
+        @include small{
+          margin: 24px 0;
+        }
+
+        span{
+          display: block;
+        }
+      }
+
+      &__number{
+        color: #000000;
+        font-weight: 500;
+        font-size: 46px;
+        line-height: 46px;
+        letter-spacing: -0.01em;
+        text-align: center;
+        margin: 0 0 4px 0;
+
+        @include small{
+          font-size: 36px;
+          line-height: 36px;
+        }
+      }
+
+      &__description{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 25px;
+        color: #1D1D1F;
+        text-align: center;
+
+        @include small{
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+
+      &__element:first-child{
+        position: relative;
+
+          &:after{
+            content: '';
+            position: absolute;
+            top: -19px;
+            width: 1px;
+            height: 112px;
+            right: -44px;
+            background: #000000;
+            opacity: 0.1;
+
+            @include small{
+              display: none;
+            }
+          }
+      }
+
+      &__element:last-child{
+        margin-bottom: 0;
+        position: relative;
+
+        &:after{
+          content: '';
+          position: absolute;
+          top: -19px;
+          width: 1px;
+          height: 112px;
+          left: -44px;
+          background: #000000;
+          opacity: 0.1;
+
+          @include small{
+            display: none;
+          }
+        }
+      }
+}
+
+
