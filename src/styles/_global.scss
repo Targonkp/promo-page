@@ -10,15 +10,15 @@ body{
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
+  min-width: 320px;
 }
 
 .wrap{
-  max-width: 1920px;
-  min-width: 320px;
+  max-width: 1980px;
   width: 100%;
-  box-sizing: border-box;
   margin: 0 auto;
   padding: 0 30px;
+  box-sizing: border-box;
 }
 
 .wrap-additional{

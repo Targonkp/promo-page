@@ -10,6 +10,10 @@
   align-items: center;
   justify-content: space-between;
 
+    @include large{
+      padding: 0 12px;
+    }
+
     @include small{
       height: 64px;
     }
@@ -35,16 +39,46 @@
     font-weight: 500;
     padding: 2px 0;
     transition: 0.3s;
-    margin-right: 24px;
+    margin: 0 24px 0 0;
+    position: relative;
 
       &:hover{
         transition: 0.4s;
         color: #238844;
       }
+
+      &:hover::after{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 2px;
+        bottom: -8px;
+        left: 0;
+        background: #238844;
+        animation: borderLine 1s;
+      }
+
+    @include large{
+      margin: 0 16px 0 0;
+    }
+
+    @include medium{
+      display: inline-block;
+      margin: 0 18px 3px 0;
+    }
+
+    @include small{
+      &:after{
+        display: none;
+      }
+    }
+
   }
 }
 
 .logo{
+    margin: 0 40px 0 0;
+
     &__link{
       transition: 0.3s;
       opacity: 1;
@@ -64,7 +98,12 @@
     &__image{
       width: 42px;
       height: 42px;
-      margin-right: 8px;
+      margin: -4px 8px 0 0;
+
+        @include medium{
+          height: 36px;
+          width: 36px;
+        }
 
         @include small{
           height: 32px;
@@ -75,7 +114,10 @@
 
     &__image2{
       width: 125px;
-      margin: 6px 0 0 0;
+
+        @include medium{
+          width: 104px;
+        }
 
         @include small{
           width: 90px;
@@ -102,6 +144,9 @@
   border-radius: 3px;
   transition: 0.4s;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover{
     opacity: 0.5;
@@ -218,5 +263,14 @@
         transition-delay:.375s;
       }
     }
+  }
+}
+
+@keyframes borderLine {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 100%;
   }
 }
